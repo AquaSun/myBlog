@@ -10,7 +10,7 @@ namespace myBlog.Controllers
     {
 		public ActionResult Login()
 		{
-			return Content ("Login!");
+			return View();
 		}
       
     }

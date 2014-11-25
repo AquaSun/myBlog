@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
+using System.Web.Mvc.Html.LinkExtensions;
 
 namespace myBlog.Controllers
 {
@@ -7,7 +8,8 @@ namespace myBlog.Controllers
 	{
 		public ActionResult Index()
 		{
-			return Content ("Hello World");
+
+			return View();
 		}
 	}
 }
