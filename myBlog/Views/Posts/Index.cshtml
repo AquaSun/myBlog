@@ -1,18 +1,18 @@
 ﻿@{
-    Layout = null;
+	ViewBag.Title = "Posts";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Index</title>
-</head>
-<body>
-    <h1>Posts Index</h1>
+   <h1>Posts Index</h1>
 
     <p>
-    	@Html.RouteLink("Click Here", "Login") to login!
+    	<a href="/login">Click here</a> to login!
     </p>
-</body>
-</html>
 
+
+    @section Scripts
+    {
+    <script>
+    	alert("Hi");
+    </script>
+
+    }

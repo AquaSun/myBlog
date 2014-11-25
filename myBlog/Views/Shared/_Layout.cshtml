@@ -1,10 +1,28 @@
-﻿<!DOCTYPE html>
+﻿@{
+
+	Layout = null;
+}
+
+<!DOCTYPE html>
 <html>
 <head>
-    <title>@ViewBag.Title</title>
+    <title>@ViewBag.Title - myBlog</title>
 </head>
 <body>
+
+	<header>
+		<h1><a href="/">Simple blog</a></h1>
+		<a href="/login">login</a>
+	</header>
+
 	@RenderBody()
+
+	<footer>
+		&copy; @DateTime.UtcNow.Year - Me
+	</footer>
+
+	@RenderSection("Scripts", false)
+
 </body>
 </html>
 
