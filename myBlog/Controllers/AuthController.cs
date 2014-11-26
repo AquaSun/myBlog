@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using myBlog.ViewModels;
 
 namespace myBlog.Controllers
 {
@@ -10,8 +11,19 @@ namespace myBlog.Controllers
     {
 		public ActionResult Login()
 		{
-			return View();
+			return View(new AuthLogin
+				{
+				});
 		}
       
+		[HttpPost]
+		public ActionResult Login(AuthLogin form)
+		{
+			if (!ModelState.IsValid)
+				return View(form);
+
+			return Content ("The form is valid");
+
+		}
     }
 }
